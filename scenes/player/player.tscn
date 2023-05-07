@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6x6pd3147e5u"]
+
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_ubfks"]
+[ext_resource type="Texture2D" uid="uid://jr7torqongo1" path="res://scenes/player/enemy 2.png" id="2_hrate"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2msty"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hj0r"]
+radius = 15.8114
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_ubfks")
+
+[node name="GameCamera" type="Camera2D" parent="."]
+zoom = Vector2(1.7, 1.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 4.76837e-07)
+scale = Vector2(0.0134215, 0.0132541)
+texture = ExtResource("2_hrate")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_2msty")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Area2D" type="Area2D" parent="."]
+rotation = -0.011647
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2.38419e-07)
+rotation = 0.317853
+shape = SubResource("CircleShape2D_0hj0r")
