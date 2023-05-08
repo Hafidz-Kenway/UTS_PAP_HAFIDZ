@@ -25,12 +25,13 @@ position = Vector2(313, 210)
 
 [node name="BasicEnemy" parent="." instance=ExtResource("3_y1dfl")]
 
-[node name="enemey_lowo" parent="." instance=ExtResource("7_uqo5t")]
+[node name="enemy_guild" parent="." instance=ExtResource("7_uqo5t")]
 position = Vector2(34, 2)
 
 [node name="EnemyManager" parent="." instance=ExtResource("5_pgtew")]
 
-[node name="EnemyManager_lowo" parent="." instance=ExtResource("8_2ia8p")]
+[node name="EnemyManager_guild" parent="." instance=ExtResource("8_2ia8p")]
+enemy_guild_scene = ExtResource("7_uqo5t")
 
 [node name="ExperientVial" parent="." instance=ExtResource("6_wfrun")]
 position = Vector2(222, 159)

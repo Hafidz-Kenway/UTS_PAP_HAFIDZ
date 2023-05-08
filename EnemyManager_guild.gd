@@ -13,7 +13,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func on_timer_timeout():
 	var player = get_tree().get_first_node_in_group("player") as Node2D
-	if player != null:
+	if player == null:
 		return
 	
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
